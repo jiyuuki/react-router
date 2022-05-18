@@ -1,21 +1,19 @@
 import './Header.css'
-
+import { Link as RouterLink } from 'react-router-dom'
 const Header = ({ logo }) => {
   return (
     <>
-      <header className="App-header">
+     <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Mon Portfolio</h1>
+        <nav>
+          <RouterLink to="/" className='App-link'>
+            A propos de moi
+          </RouterLink>
+          <RouterLink to="/projects" className='App-link'>
+            Mes projets
+          </RouterLink>
+        </nav>
       </header>
     </>
   )
